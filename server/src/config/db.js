@@ -1,11 +1,13 @@
 import mysql from 'mysql';
+import dotenv from 'dotenv'
+
 
 let pool = mysql.createPool({
     connectionLimit: 10,
-    host: 'localhost',
-    user: 'exampleUser',
-    password: 'password',
-    database: 'InClassExample'
+    host: process.env.DB_HOST,
+    user: process.env.USER_NAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME
 });
 
 async function executeQuery(sql, args = []) {
