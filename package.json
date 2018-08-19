@@ -18,6 +18,8 @@
   "author": "Covalence",
   "license": "ISC",
   "dependencies": {
+    "@material/button": "^0.35.0",
+    "@material/textfield": "^0.35.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
