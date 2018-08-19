@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch, Link, NavLink } from 'react-router-dom'
 import { render } from 'react-dom';
+import logo from '../Images/Postrninja_logo.png'
 
 class Home extends Component {
 
@@ -12,7 +14,7 @@ class Home extends Component {
 <React.Fragment>
             <form className="text-center form-signin border border-light p-5" >
 
-              <img className="ninja-logo" src="../../images/Postrninja_logo.png" alt="" width="72" height="72"/>
+              <img className="ninja-logo" src={{logo}} alt="" style={{height: "72px", width: "72px"}}/>
 
               <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
 
@@ -41,7 +43,7 @@ class Home extends Component {
               <button className="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
 
               <p>Not a member?
-                <a href="../signup.jsx">Register</a>
+                <NavLink to="/signup">Register</NavLink>
                 </p>
 
               <p className="mt-5 mb-3 text-muted">© 2018</p>

@@ -11,7 +11,7 @@ class Apps extends Component {
                 <Fragment>
                     <Switch>
                         <Route exact path="/" component={Home} />
-                        <Route exact path="/" component={Signup} />
+                        <Route exact path="/signup" component={Signup} />
                     </Switch>
                 </Fragment>
             </Router>
