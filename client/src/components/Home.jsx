@@ -12,7 +12,7 @@ class Home extends Component {
 <React.Fragment>
             <form className="text-center form-signin border border-light p-5" >
 
-              <img className="ninja-logo" src="../../images/Postrninja_logo.png" alt="" width="72" height="72"/>
+              <img className="ninja-logo" src="../../images/Postrninja_logo.png" alt="red and black PosterNinja Logo" width="72" height="72"/>
 
               <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
 
