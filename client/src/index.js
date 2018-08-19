@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/app';
-import * as mdc from 'material-components-web'
+import App from './components/Apps';
+
 
 
 ReactDOM.render(<App />, document.getElementById('root'));

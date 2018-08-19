@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import HelloWorld from './hello';
-import Login from './login';
+import Home from './Home'
 
 class Apps extends Component {
 
@@ -19,4 +18,4 @@ class Apps extends Component {
     }
 }
 
-export default Navigation;
+export default Apps;
