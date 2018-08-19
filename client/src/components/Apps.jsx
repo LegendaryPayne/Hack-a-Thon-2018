@@ -10,7 +10,6 @@ class Apps extends Component {
                 <Fragment>
                     <Switch>
                         <Route exact path="/" component={Home} />
-                        <Route path="/login" component={Login} />
                     </Switch>
                 </Fragment>
             </Router>
