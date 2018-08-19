@@ -1,5 +1,4 @@
 import { rows, row, empty } from '../config/db';
-import { pluralize } from '../middleware/utils.mw';
 
 export const SQL_PREFIX = `sp`;
 export const SQL_ALL = `${SQL_PREFIX}GetAll`;
@@ -10,7 +9,7 @@ export const SQL_DELETE = `${SQL_PREFIX}Delete`;
 
 function all(MODEL_NAME) {
     return (args) => {
-        return rows(`${SQL_ALL}${pluralize(MODEL_NAME)}`, args);
+        return rows(`${SQL_ALL}${MODEL_NAME}`, args);
     };
 }
 

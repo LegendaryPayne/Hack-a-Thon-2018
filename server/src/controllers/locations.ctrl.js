@@ -39,12 +39,10 @@ export function create(req, res, next) {
         location_notes
     })
         .then((sqlArgs) => {
-            console.log('got here 2')
             console.log(sqlArgs)
             return LocationsProcedures.create(sqlArgs);
         })
         .then((locations) => {
-            console.log("got here 4")
             res.json(locations);
         })
         .catch((err) => {
@@ -53,17 +51,21 @@ export function create(req, res, next) {
 }
 
 export function update(req, res, next) {
-    let id = req.params.id;
-    let { address, latitude, longitude, access, location_notes } = req.body;
+    let idlocation = req.params.id;
+    let { location_name, address, latitude, longitude, access, location_notes } = req.body;
+
+    console.log( idlocation ,location_name, address, latitude, longitude, access, location_notes )
 
     LocationsValidators.update({
-        id,
+        idlocation,
         location_name,
         address,
         latitude,
         longitude,
         access,
         location_notes
+
+
     })
         .then((sqlArgs) => {
             return LocationsProcedures.update(sqlArgs);
