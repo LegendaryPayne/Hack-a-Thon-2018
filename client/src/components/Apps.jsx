@@ -1,18 +1,17 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import HelloWorld from './hello';
-import GoodbyeWorld from './goodbye';
+import Home from './Home'
+import Signup from './signup'
 
-class Navigation extends Component {
+class Apps extends Component {
 
     render() {
         return (
             <Router>
                 <Fragment>
-                    <Link to="/goodbye">Goodbye</Link>
                     <Switch>
-                        <Route exact path="/" component={HelloWorld} />
-                        <Route path="/goodbye" component={GoodbyeWorld} />
+                        <Route exact path="/" component={Home} />
+                        <Route exact path="/" component={Signup} />
                     </Switch>
                 </Fragment>
             </Router>
@@ -20,4 +19,4 @@ class Navigation extends Component {
     }
 }
 
-export default Navigation;
+export default Apps;

@@ -28,7 +28,7 @@ export function create(args) {
         let err = false;
         let message = '';
         if (!lodash.isFinite(latitude)) {
-            reject(new Error('LatitudE is not a number'));
+            reject(new Error('Latitude is not a number'));
             return;
         }
 
@@ -68,7 +68,7 @@ export function update(args) {
         }
 
         if (!lodash.isFinite(latitude)) {
-            reject(new Error('Latitude  is not a number'));
+            reject(new Error('Latitude is not a number'));
             return;
         }
 
