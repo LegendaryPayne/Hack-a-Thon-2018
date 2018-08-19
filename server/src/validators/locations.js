@@ -46,12 +46,11 @@ export function create(args) {
             reject(new Error('Invalid Notes'));
             return;
         }
-        console.log("got here 1")
         resolve([location_name, address, latitude, longitude, access, location_notes]);
     });
 }
 export function update(args) {
-    let id = +args.id;
+    let idlocation = +args.idlocation;
     let location_name = args.location_name;
     let address = args.address;
     let latitude = +args.latitude;
@@ -63,7 +62,7 @@ export function update(args) {
         let err = false;
         let message = '';
 
-        if (!lodash.isFinite(id)) {
+        if (!lodash.isFinite(idlocation)) {
             reject(new Error('Id is not a number'));
             return;
         }
@@ -93,7 +92,7 @@ export function update(args) {
             return;
         }
 
-        resolve([id, location_name, address, latitude, longitude, access, location_notes]);
+        resolve([idlocation, location_name, address, latitude, longitude, access, location_notes]);
     });
 }
 export function destroy(args) {
