@@ -1,0 +1,28 @@
+// Login page styles
+@import "@material/textfield/mdc-text-field";
+
+
+.header {
+  text-align: center;
+}
+
+.Postrninja_logo {
+  width: 150px;
+  height: 150px;
+  padding-top: 80px;
+  fill: currentColor;
+}
+
+//.no-svg .logo {
+  //width: 200px;
+ // height: 164px;
+  //background-image: url(Postrninja_logo.png);
+//}
+
+.username,
+.password {
+  display: block;
+  width: 300px;
+  margin: 20px auto;
+}
+
