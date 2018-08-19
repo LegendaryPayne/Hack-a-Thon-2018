@@ -4,21 +4,24 @@ import {BrowserRouter as Router, Route, Link, Switch, NavLink} from 'react-route
 import GoogleMapReact from 'google-map-react';
 
 class HomePage extends React.Component {
-
     constructor(props) {
         super(props);
         this.state = {
             locations: [],
             center: {
-                  lat: 59.95,
-                  lng: 30.33
+                  lat: 33.491,
+                  lng: -86.851
             },
             zoom: 11
               };
     }
 
+componentDidMount() {
+    this.gogetdata()
+}
+
     gogetdata() {
-        fetch('/api/location')
+        fetch('/api/locations')
         .then(res => res.json())
         .then(data => {
             this.setState({
@@ -29,20 +32,14 @@ class HomePage extends React.Component {
     
     render() {
         console.log(this.state.locations)
-        this.gogetdata()
         return (
             <React.Fragment>
       <div style={{ height: '100vh', width: '100%' }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: "AIzaSyA5RTu9UsqZebjVIMCFyAYkKImVPxEwtiw" }}
-          defaultCenter={this.props.center}
-          defaultZoom={this.props.zoom}
+          defaultCenter={this.state.center}
+          defaultZoom={this.state.zoom}
         >
-          <AnyReactComponent
-            lat={59.955413}
-            lng={30.337844}
-            text={'Kreyser Avrora'}
-          />
         </GoogleMapReact>
       </div>
             </React.Fragment>

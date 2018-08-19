@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router, Route, Switch, Link, NavLink } from 'react-router-dom'
+import logo from '../Images/Postrninja_logo.png'
 
 
 class Login extends Component {
