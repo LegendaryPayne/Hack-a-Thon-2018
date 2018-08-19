@@ -10,12 +10,8 @@ class Apps extends Component {
             <Router>
                 <Fragment>
                     <Switch>
-                        <Route exact path="/" component={HelloWorld} />
-<<<<<<< HEAD:client/src/components/app.jsx
+                        <Route exact path="/" component={Home} />
                         <Route path="/login" component={Login} />
-=======
-                        <Route path="/" component={GoodbyeWorld} />
->>>>>>> e2c500743fd927495557ce13de00a95697528b93:client/src/components/Apps.jsx
                     </Switch>
                 </Fragment>
             </Router>
