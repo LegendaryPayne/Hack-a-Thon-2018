@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch, Link, NavLink } from 'react-router-dom'
 import { render } from 'react-dom';
-import logo from '../Images/Postrninja_logo.png'
+import { BrowserRouter as Router, Route, Switch, Link, NavLink } from 'react-router-dom'
 
-class Navigation extends Component {
+
+class Login extends Component {
 
     constructor(props) {
         super(props);
@@ -26,12 +26,19 @@ class Navigation extends Component {
 
               <input type="password" id="inputPassword" className="form-control" placeholder="Password" required=""/>
 
+              <div className="checkbox mb-3">
+
+                <label>
+
                   <input type="checkbox" value="remember-me"/> Remember me
+
+                </label>
                 <div>
 
                 <a href="">Forgot password?</a>
 
                 </div>
+              </div>
 
               <button className="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
 
@@ -44,8 +51,9 @@ class Navigation extends Component {
             </form>
 
             </React.Fragment>
-        )
+         
+        );
     }
 }
 
-export default Navigation;
+export default Login;

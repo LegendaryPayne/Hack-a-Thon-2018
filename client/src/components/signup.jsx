@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch, Link, NavLink } from 'react-router-dom';
+
 import { render } from 'react-dom';
 
 class Signup extends Component {
@@ -12,39 +14,39 @@ class Signup extends Component {
 
 <React.Fragment>
 
-<form class="text-center border border-light p-5">
+<form className="text-center border border-light p-5">
 
-<p class="h4 mb-4">Sign up</p>
+<p className="h4 mb-4">Sign up</p>
 
-<div class="form-row mb-4">
+<div className="form-row mb-4">
 
-    <div class="col">
+    <div className="col">
         
-        <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name"/>
+        <input type="text" id="defaultRegisterFormFirstName" className="form-control" placeholder="First name"/>
     </div>
 
-    <div class="col">
+    <div className="col">
 
-        <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name"/>
+        <input type="text" id="defaultRegisterFormLastName" className="form-control" placeholder="Last name"/>
     </div>
 
 </div>
 
-<input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail"/>
+<input type="email" id="defaultRegisterFormEmail" className="form-control mb-4" placeholder="E-mail"/>
 
 
-<input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock"/>
-<small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+<input type="password" id="defaultRegisterFormPassword" className="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock"/>
+<small id="defaultRegisterFormPasswordHelpBlock" className="form-text text-muted mb-4">
     At least 8 characters and 1 digit
 </small>
 
 
-<button class="btn btn-info my-4 btn-block" type="submit">Sign in</button>
+<button className="btn btn-info my-4 btn-block" type="submit">Sign in</button>
 
 <p>By clicking
     <em>Sign up</em> you agree to our
-    <a href="" target="_blank">terms of service</a> and
-    <a href="" target="_blank">terms of service</a>. </p>
+    <NavLink to="/somewhere"> terms of service.</NavLink>
+    </p>
 
 </form>
 
