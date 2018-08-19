@@ -4,6 +4,10 @@ import express from 'express';
 import morgan from 'morgan';
 import routes from './routes';
 import stateRouting from './middleware/routing.mw';
+import dotenv from 'dotenv'
+
+
+
 
 const CLIENT_PATH = join(__dirname, '../../client');
 

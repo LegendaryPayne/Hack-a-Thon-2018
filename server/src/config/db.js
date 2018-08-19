@@ -1,11 +1,14 @@
 import mysql from 'mysql';
 import dotenv from 'dotenv'
 
+dotenv.config()
+
+console.log(process.env.DB_HOST)
 
 let pool = mysql.createPool({
     connectionLimit: 10,
     host: process.env.DB_HOST,
-    user: process.env.USER_NAME,
+    user: process.env.DB_USER_NAME,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME
 });
